@@ -1,39 +1,6 @@
 #import "DogFanWallpaper.h"
 #define _4inch  [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0
 
-@interface _UILegibilitySettings : NSObject {
-@private
-	int _style;
-	UIColor* _contentColor;
-	UIColor* _primaryColor;
-	UIColor* _secondaryColor;
-	UIColor* _shadowColor;
-	float _shadowRadius;
-	float _shadowAlpha;
-	float _imageOutset;
-	NSString* _shadowCompositingFilterName;
-}
-@property(copy, nonatomic) NSString* shadowCompositingFilterName;
-@property(assign, nonatomic) float imageOutset;
-@property(assign, nonatomic) float shadowAlpha;
-@property(assign, nonatomic) float shadowRadius;
-@property(retain, nonatomic) UIColor* shadowColor;
-@property(retain, nonatomic) UIColor* secondaryColor;
-@property(retain, nonatomic) UIColor* primaryColor;
-@property(retain, nonatomic) UIColor* contentColor;
-@property(assign, nonatomic) int style;
-+(id)sharedInstanceForStyle:(int)style;
--(BOOL)isEqual:(id)equal;
--(void)setPropertiesForStyle:(int)style;
--(void)dealloc;
--(id)initWithStyle:(int)style primaryColor:(id)color secondaryColor:(id)color3 shadowColor:(id)color4;
--(id)initWithStyle:(int)style contentColor:(id)color;
--(id)initWithContentColor:(id)contentColor contrast:(float)contrast;
--(id)initWithContentColor:(id)contentColor;
--(id)initWithStyle:(int)style;
-@end
-
-
 @interface DogFanWallpaper ()
 @end
 
@@ -72,13 +39,6 @@
 - (UIView *)view
 {
     return self;
-}
-
--(_UILegibilitySettings *)legibilitySettings
-{
-    //NSLog(@"%@", [NSThread callStackSymbols]);
-    _UILegibilitySettings* setting = [[_UILegibilitySettings alloc] initWithStyle:2];
-    return setting;
 }
 
 #pragma mark - Wallpaper implementation
@@ -148,10 +108,6 @@
 
 - (void)setAnimating:(BOOL)animating
 {
-    if (animating)
-        NSLog(@"Should Spin now");
-    else
-        NSLog(@"Should Stop now");
     if (!lock && animating) {
         lock = YES;
         NSLog(@"Spining now");
@@ -169,7 +125,6 @@
         self.fanSpinTimer = nil;
         [self.shakeTimer invalidate];
         self.shakeTimer = nil;
-        //cover.frame = CGRectMake(self.frame.size.width/2-101, self.frame.size.height/2-87, 200, 200);
     }
 }
 
