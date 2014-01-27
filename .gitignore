@@ -21,8 +21,6 @@
 *.swp
 *.lock
 profile
-*.xcuserstate
-*.xccheckout
 
 ####
 # Xcode temporary files that should never be committed
@@ -65,7 +63,9 @@ build/
 !default.mode2v3
 !default.perspectivev3
  
- 
+#Xcode 5
+*.xccheckout
+
 ####
 # Xcode 4 - semi-personal settings
 #
