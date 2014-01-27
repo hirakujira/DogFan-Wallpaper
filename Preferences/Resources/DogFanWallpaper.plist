@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Speed (RPM)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>PostNotification</key>
+			<string>tw.hiraku.dogfan/updated</string>
+			<key>defaults</key>
+			<string>tw.hiraku.dogfan</string>
+			<key>default</key>
+			<integer>150</integer>
+			<key>key</key>
+			<string>rpm</string>
+			<key>min</key>
+			<integer>10</integer>
+			<key>max</key>
+			<integer>360</integer>
+			<key>showValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Shake</string>
+			<key>footerText</key>
+			<string>The cover of fan shakes if the speed is too high. Set the slider to 0 to disable.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>PostNotification</key>
+			<string>tw.hiraku.dogfan/updated</string>
+			<key>defaults</key>
+			<string>tw.hiraku.dogfan</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>key</key>
+			<string>offset</string>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>8</integer>
+			<key>showValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>bundle</key>
+			<string>Wallpaper</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Wallpaper Settings</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>save:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Save and Respring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Credit</string>
+			<key>footerText</key>
+			<string>MIT Licensed. 
+			
+iOS dynamic wallpaper by @hirakujira
+graphic by @evenwu &amp; @sillyleo. 
+html animation by @vincicat.</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>DogFan Wallpaper</string>
+</dict>
+</plist>

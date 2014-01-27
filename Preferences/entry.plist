@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = DogFanWallpaper;
+		cell = PSLinkCell;
+		detail = "DogFanWallpaperListController";
+		icon = "icon.png";
+		isController = 1;
+		label = "DogFan Wallpaper";
+	};
+}
