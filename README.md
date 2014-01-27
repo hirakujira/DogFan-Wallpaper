@@ -11,6 +11,7 @@ Features
 Build
 ================
 Use Xcode to build the bundle, however you should remember to :
+
 1. Set the active scheme to "iOS Devices" (unplug your iDevices if it doesn't appear)
 2. Install "ProceduralWallpaperLoader" in Cydia, it can prevent SpringBoard from respring loop if the bundle is invalid.
 3. Your bundle should be placed in /System/Library/ProceduralWallpaper or /Library/ProceduralWallpaper (if ProceduralWallpaperLoader is installed).
