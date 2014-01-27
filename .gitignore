@@ -21,8 +21,9 @@
 *.swp
 *.lock
 profile
- 
- 
+*.xcuserstate
+*.xccheckout
+
 ####
 # Xcode temporary files that should never be committed
 # 
