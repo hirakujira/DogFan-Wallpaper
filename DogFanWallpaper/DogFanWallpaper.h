@@ -6,7 +6,7 @@
     UIImageView* cover;
     UIImageView *fan;
     BOOL isAnimating;
-    BOOL lock;
+    //BOOL lock;
     float x;
     float y;
     float offset;

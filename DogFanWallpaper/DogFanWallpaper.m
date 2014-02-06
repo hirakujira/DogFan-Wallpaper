@@ -48,7 +48,6 @@
     if (!(self = [super initWithFrame:frame]))
         return nil;
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"legibilitySettingsBlack" object:self];
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     if (_4inch) {
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground-568@2x" ofType:@"png"]]];
@@ -56,7 +55,7 @@
     else
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground@2x" ofType:@"png"]]];
     
-    
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"legibilitySettingsBlack" object:self];
     plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/tw.hiraku.dogfan.plist"];
     
     rpm = [[plistDict objectForKey:@"rpm"] floatValue];
@@ -108,23 +107,29 @@
 
 - (void)setAnimating:(BOOL)animating
 {
-    if (!lock && animating) {
-        lock = YES;
-        NSLog(@"Spining now");
-        self.fanSpinTimer = [NSTimer scheduledTimerWithTimeInterval:(15/rpm) target:self selector:@selector(spin) userInfo:nil repeats:YES];
-        if (offset > 0 && rpm > 256) {
-            self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:(0.2) target:self selector:@selector(shake1) userInfo:nil repeats:YES];
-        }
-        
-    }
-    else if (lock && !animating)
+    if (animating)
     {
-        NSLog(@"Stopping now");
-        lock = NO;
-        [self.fanSpinTimer invalidate];
-        self.fanSpinTimer = nil;
-        [self.shakeTimer invalidate];
-        self.shakeTimer = nil;
+        if (!self.fanSpinTimer)
+        {
+            self.fanSpinTimer = [NSTimer scheduledTimerWithTimeInterval:(15/rpm) target:self selector:@selector(spin) userInfo:nil repeats:YES];
+            [[NSRunLoop mainRunLoop] addTimer:self.fanSpinTimer forMode:NSRunLoopCommonModes];
+        }
+        if (offset > 0 && rpm > 256 && !self.shakeTimer)
+        {
+            self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:(0.2) target:self selector:@selector(shake1) userInfo:nil repeats:YES];
+            [[NSRunLoop mainRunLoop] addTimer:self.shakeTimer forMode:NSRunLoopCommonModes];
+        }
+    }
+    else
+    {
+        if (self.fanSpinTimer) {
+            [self.fanSpinTimer invalidate];
+            self.fanSpinTimer = nil;
+        }
+        if (self.shakeTimer) {
+            [self.shakeTimer invalidate];
+            self.shakeTimer = nil;
+        }
     }
 }
 

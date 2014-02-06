@@ -26,3 +26,13 @@ Credits
 * @sillyleo, the one who make the graphic prototype of fan
 * @evenwu, the one who make the PSD version of this fan and allow everyone use it.
 * @vincicat, the one who make the dynamic html+css animation of fan
+
+
+Knowing Issues
+================
+* LegibilitySettings (UIStatusbar Color and Time Color) always white
+
+Referenced Project
+================
+* [wakinchan / Perfume-Wallpaper](https://github.com/wakinchan/Perfume-Wallpaper)
+* [akiland / ProceduralWallpaper](https://github.com/akiland/ProceduralWallpaper)
