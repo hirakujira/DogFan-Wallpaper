@@ -9,14 +9,8 @@
 
 @synthesize delegate = _delegate;
 
-+ (NSString *)identifier
-{
++ (NSString *)identifier {
     return @"DogFanWallpaper";
-}
-
-+ (BOOL)colorChangesSignificantly
-{
-    return YES;
 }
 
 + (NSArray *)presetWallpaperOptions
@@ -24,6 +18,14 @@
     return @[
              @{ @"kSBUIMagicWallpaperThumbnailNameKey": @"Preview",@"info": @"" },
              ];
+}
+
++ (NSString *)thumbnailImageName {
+    return @"Preview";
+}
+
++ (NSString *)representativeThumbnailImageName {
+    return @"Preview_hero";
 }
 
 - (void)setWallpaperOptions:(NSDictionary *)options
@@ -36,8 +38,7 @@
     
 }
 
-- (UIView *)view
-{
+- (UIView *)view {
     return self;
 }
 
@@ -55,7 +56,6 @@
     else
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground@2x" ofType:@"png"]]];
     
-    //[[NSNotificationCenter defaultCenter] postNotificationName:@"legibilitySettingsBlack" object:self];
     plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/tw.hiraku.dogfan.plist"];
     
     rpm = [[plistDict objectForKey:@"rpm"] floatValue];

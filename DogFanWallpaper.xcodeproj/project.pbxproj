@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA3BAAC4195BE85500126ADB /* Preview_hero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BAAC3195BE85500126ADB /* Preview_hero@2x.png */; };
 		CA467FEC18802BD500D6E668 /* fan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA467FEB18802BD500D6E668 /* fan@2x.png */; };
 		CA467FEE1880356700D6E668 /* cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA467FED1880356700D6E668 /* cover@2x.png */; };
 		CA467FF0188037A000D6E668 /* Preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA467FEF188037A000D6E668 /* Preview@2x.png */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA3BAAC3195BE85500126ADB /* Preview_hero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preview_hero@2x.png"; sourceTree = "<group>"; };
 		CA467FEB18802BD500D6E668 /* fan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fan@2x.png"; sourceTree = "<group>"; };
 		CA467FED1880356700D6E668 /* cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cover@2x.png"; sourceTree = "<group>"; };
 		CA467FEF188037A000D6E668 /* Preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preview@2x.png"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				CA467FEB18802BD500D6E668 /* fan@2x.png */,
 				CA467FED1880356700D6E668 /* cover@2x.png */,
 				CA467FEF188037A000D6E668 /* Preview@2x.png */,
+				CA3BAAC3195BE85500126ADB /* Preview_hero@2x.png */,
 				CA78F0D0188025560024FE31 /* DogFanWallpaper-Info.plist */,
 				CA78F0EF188027260024FE31 /* SBFProceduralWallpaper.h */,
 				CA78F0DE188025560024FE31 /* DogFanWallpaper-Prefix.pch */,
@@ -170,6 +173,7 @@
 				CA802518188EF01800130A35 /* LockBackground@2x.png in Resources */,
 				CA78F0F3188028730024FE31 /* LockBackground-568@2x.png in Resources */,
 				CA467FF0188037A000D6E668 /* Preview@2x.png in Resources */,
+				CA3BAAC4195BE85500126ADB /* Preview_hero@2x.png in Resources */,
 				CA467FEE1880356700D6E668 /* cover@2x.png in Resources */,
 				CA467FEC18802BD500D6E668 /* fan@2x.png in Resources */,
 				CA78F0F4188028730024FE31 /* Info.plist in Resources */,

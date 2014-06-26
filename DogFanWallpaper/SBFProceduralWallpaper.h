@@ -24,3 +24,4 @@
 - (void)setAnimating:(BOOL)animating;
 
 @end
+
