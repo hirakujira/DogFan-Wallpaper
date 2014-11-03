@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2385B71A07C85800E41705 /* LockBackground-736@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2385B61A07C85800E41705 /* LockBackground-736@3x.png */; };
+		CA2385BB1A07C97700E41705 /* cover@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2385BA1A07C97700E41705 /* cover@3x.png */; };
+		CA2385BD1A07CBFC00E41705 /* fan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2385BC1A07CBFC00E41705 /* fan@3x.png */; };
+		CA2385BF1A07CE7600E41705 /* LockBackground-667@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2385BE1A07CE7600E41705 /* LockBackground-667@2x.png */; };
+		CA2385C31A07D47700E41705 /* Preview_hero-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2385C21A07D47700E41705 /* Preview_hero-667h@2x.png */; };
+		CA2385C51A07D4FF00E41705 /* Preview_hero-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2385C41A07D4FF00E41705 /* Preview_hero-736h@3x.png */; };
 		CA3BAAC4195BE85500126ADB /* Preview_hero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3BAAC3195BE85500126ADB /* Preview_hero@2x.png */; };
 		CA467FEC18802BD500D6E668 /* fan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA467FEB18802BD500D6E668 /* fan@2x.png */; };
 		CA467FEE1880356700D6E668 /* cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA467FED1880356700D6E668 /* cover@2x.png */; };
@@ -22,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA2385B61A07C85800E41705 /* LockBackground-736@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LockBackground-736@3x.png"; sourceTree = "<group>"; };
+		CA2385BA1A07C97700E41705 /* cover@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cover@3x.png"; sourceTree = "<group>"; };
+		CA2385BC1A07CBFC00E41705 /* fan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fan@3x.png"; sourceTree = "<group>"; };
+		CA2385BE1A07CE7600E41705 /* LockBackground-667@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LockBackground-667@2x.png"; sourceTree = "<group>"; };
+		CA2385C21A07D47700E41705 /* Preview_hero-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preview_hero-667h@2x.png"; sourceTree = "<group>"; };
+		CA2385C41A07D4FF00E41705 /* Preview_hero-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preview_hero-736h@3x.png"; sourceTree = "<group>"; };
 		CA3BAAC3195BE85500126ADB /* Preview_hero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preview_hero@2x.png"; sourceTree = "<group>"; };
 		CA467FEB18802BD500D6E668 /* fan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fan@2x.png"; sourceTree = "<group>"; };
 		CA467FED1880356700D6E668 /* cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cover@2x.png"; sourceTree = "<group>"; };
@@ -94,11 +106,17 @@
 		CA78F0C8188025560024FE31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA2385B61A07C85800E41705 /* LockBackground-736@3x.png */,
+				CA2385BE1A07CE7600E41705 /* LockBackground-667@2x.png */,
 				CA78F0E41880269B0024FE31 /* LockBackground-568@2x.png */,
 				CA802517188EF01800130A35 /* LockBackground@2x.png */,
 				CA467FEB18802BD500D6E668 /* fan@2x.png */,
+				CA2385BC1A07CBFC00E41705 /* fan@3x.png */,
 				CA467FED1880356700D6E668 /* cover@2x.png */,
+				CA2385BA1A07C97700E41705 /* cover@3x.png */,
 				CA467FEF188037A000D6E668 /* Preview@2x.png */,
+				CA2385C41A07D4FF00E41705 /* Preview_hero-736h@3x.png */,
+				CA2385C21A07D47700E41705 /* Preview_hero-667h@2x.png */,
 				CA3BAAC3195BE85500126ADB /* Preview_hero@2x.png */,
 				CA78F0D0188025560024FE31 /* DogFanWallpaper-Info.plist */,
 				CA78F0EF188027260024FE31 /* SBFProceduralWallpaper.h */,
@@ -146,7 +164,7 @@
 		CA78F0B1188025550024FE31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = CA78F0B4188025550024FE31 /* Build configuration list for PBXProject "DogFanWallpaper" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -173,10 +191,16 @@
 				CA802518188EF01800130A35 /* LockBackground@2x.png in Resources */,
 				CA78F0F3188028730024FE31 /* LockBackground-568@2x.png in Resources */,
 				CA467FF0188037A000D6E668 /* Preview@2x.png in Resources */,
+				CA2385BD1A07CBFC00E41705 /* fan@3x.png in Resources */,
+				CA2385C31A07D47700E41705 /* Preview_hero-667h@2x.png in Resources */,
 				CA3BAAC4195BE85500126ADB /* Preview_hero@2x.png in Resources */,
+				CA2385BB1A07C97700E41705 /* cover@3x.png in Resources */,
 				CA467FEE1880356700D6E668 /* cover@2x.png in Resources */,
+				CA2385B71A07C85800E41705 /* LockBackground-736@3x.png in Resources */,
 				CA467FEC18802BD500D6E668 /* fan@2x.png in Resources */,
+				CA2385C51A07D4FF00E41705 /* Preview_hero-736h@3x.png in Resources */,
 				CA78F0F4188028730024FE31 /* Info.plist in Resources */,
+				CA2385BF1A07CE7600E41705 /* LockBackground-667@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +221,6 @@
 		CA78F0DF188025560024FE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -233,7 +256,6 @@
 		CA78F0E0188025560024FE31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

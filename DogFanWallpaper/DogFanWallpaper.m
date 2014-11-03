@@ -1,5 +1,7 @@
 #import "DogFanWallpaper.h"
-#define _4inch  [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0
+#define iPhone5  [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0
+#define iPhone6  [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 667.0
+#define iPhone6P  [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 736.0
 
 @interface DogFanWallpaper ()
 @end
@@ -13,11 +15,8 @@
     return @"DogFanWallpaper";
 }
 
-+ (NSArray *)presetWallpaperOptions
-{
-    return @[
-             @{ @"kSBUIMagicWallpaperThumbnailNameKey": @"Preview",@"info": @"" },
-             ];
++ (NSArray *)presetWallpaperOptions {
+    return @[@{@"kSBUIMagicWallpaperThumbnailNameKey":@"Preview",@"info":@""},];
 }
 
 + (NSString *)thumbnailImageName {
@@ -25,16 +24,18 @@
 }
 
 + (NSString *)representativeThumbnailImageName {
+    if (iPhone6)
+        return @"Preview_hero-667h";
+    else if (iPhone6P)
+        return @"Preview_hero-736h";
     return @"Preview_hero";
 }
 
-- (void)setWallpaperOptions:(NSDictionary *)options
-{
+- (void)setWallpaperOptions:(NSDictionary *)options {
 
 }
 
-- (void)setWallpaperVariant:(int)variant
-{
+- (void)setWallpaperVariant:(int)variant {
     
 }
 
@@ -50,11 +51,18 @@
         return nil;
     
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    if (_4inch) {
+    if (iPhone5) {
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground-568@2x" ofType:@"png"]]];
     }
-    else
+    else if (iPhone6) {
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground-667@2x" ofType:@"png"]]];
+    }
+    else if (iPhone6P) {
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground-736@3x" ofType:@"png"]]];
+    }
+    else {
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"LockBackground@2x" ofType:@"png"]]];
+    }
     
     plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/tw.hiraku.dogfan.plist"];
     
@@ -63,12 +71,34 @@
     if (rpm < 10)
         rpm = 150;
     
-    fan = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"fan@2x" ofType:@"png"]]];
-    fan.frame = CGRectMake(self.frame.size.width/2-64, self.frame.size.height/2-40, 128, 128);
+    
+    if (iPhone6) {
+        fan = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"fan@2x" ofType:@"png"]]];
+        fan.frame = CGRectMake(self.frame.size.width/2-81, self.frame.size.height/2-50, 164, 164);
+    }
+    else if (iPhone6P) {
+        fan = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"fan@3x" ofType:@"png"]]];
+        fan.frame = CGRectMake(self.frame.size.width/2-81, self.frame.size.height/2-50, 164, 164);
+    }
+    else {
+        fan = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"fan@2x" ofType:@"png"]]];
+        fan.frame = CGRectMake(self.frame.size.width/2-64, self.frame.size.height/2-40, 128, 128);
+    }
+    
     [self addSubview:fan];
     
-    cover = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"cover@2x" ofType:@"png"]]];
-    cover.frame = CGRectMake(self.frame.size.width/2-101, self.frame.size.height/2-87, 200, 200);
+    if (iPhone6) {
+        cover = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"cover@2x" ofType:@"png"]]];
+        cover.frame = CGRectMake(self.frame.size.width/2-115, self.frame.size.height/2-101, 232, 232);
+    }
+    else if (iPhone6P) {
+        cover = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"cover@3x" ofType:@"png"]]];
+        cover.frame = CGRectMake(self.frame.size.width/2-127.5, self.frame.size.height/2-113, 256, 256);
+    }
+    else {
+        cover = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"cover@2x" ofType:@"png"]]];
+        cover.frame = CGRectMake(self.frame.size.width/2-101, self.frame.size.height/2-87, 200, 200);
+    }
     x = cover.frame.origin.x;
     y = cover.frame.origin.y;
     [self addSubview:cover];
